@@ -1,0 +1,8 @@
+jupyterlab
+notebook
+voila
+pandas
+scipy
+statsmodels
+rich
+ipython

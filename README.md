@@ -68,7 +68,7 @@
 
 ### Arquivos do Projeto
 - **Dados:** student-mat.csv, student-por.csv
-- **Código:** ai_topics.ipynb
+- **Código:** Notebook.ipynb
 - **Documentação:** README.md, requirements.txt
 
 ### Etapas da Implementação
@@ -83,7 +83,7 @@
 - Documentação do XGBoost
 - Kaggle - Student Performance Dataset
 - UCI Machine Learning Repository
-- Código: ai_topics.ipynb
+- Código: Notebook.ipynb
 
 ## Modificações na Técnica
 - Adaptação do artigo original para predição de **nota final (G3)** com base em **G1** e **G2**.

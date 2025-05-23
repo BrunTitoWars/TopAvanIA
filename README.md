@@ -1,107 +1,97 @@
+
 # Relatório do Artigo - Predição de Desempenho Acadêmico com IA
+
 ## Artigo Escolhido
-Título: Linear regression model to predict the use of artificial intelligence in experimental science students (adaptado metodologicamente para predição de desempenho escolar).
-Autores: Elizeth Mayrene Flores Hinostroza, Derling Jose Mendoza, Mercedes Navarro Cejas, Edinson Patricio Palacios Trujillo.
-Periódico: International Electronic Journal of Mathematics Education.
-Ano de Publicação: 2025.
-Fator de Impacto: Sim, indexado na Web of Science.
-Descrição do Miniprojeto
-Base de Dados Utilizada
-Fonte: UCI Machine Learning Repository.
-Link: https://doi.org/10.24432/C5TG7T
-Descrição: Base composta por informações de desempenho acadêmico de estudantes do ensino médio em Portugal, nos cursos de Matemática e Português.
 
-## Variáveis Selecionadas
-G1: Nota no primeiro semestre.
-G2: Nota no segundo semestre.
-G3: Nota final (variável alvo).
+- **Título:** *Linear regression model to predict the use of artificial intelligence in experimental science students* (adaptado metodologicamente para predição de desempenho escolar).
+- **Autores:** Elizeth Mayrene Flores Hinostroza, Derling Jose Mendoza, Mercedes Navarro Cejas, Edinson Patricio Palacios Trujillo.
+- **Periódico:** International Electronic Journal of Mathematics Education.
+- **Ano de Publicação:** 2025.
+- **Fator de Impacto:** Sim, indexado na Web of Science.
 
-## Tamanho da População
-Total de Registros: 1044 estudantes (ambas as turmas de matemática e português combinadas).
+## Descrição do Miniprojeto
 
-## Divisão de Dados
-Treinamento: 80%
-Teste: 20%
+### Base de Dados Utilizada
+- **Fonte:** UCI Machine Learning Repository.
+- **Link:** https://doi.org/10.24432/C5TG7T
+- **Descrição:** Dados acadêmicos de alunos do ensino médio em Portugal, dos cursos de Matemática e Português.
 
-## Validação Cruzada
-Não foi aplicada validação cruzada, visto que foi utilizada uma divisão simples de treino e teste para fins de simplicidade.
+### Variáveis Selecionadas
+- **G1:** Nota no primeiro semestre.
+- **G2:** Nota no segundo semestre.
+- **G3:** Nota final (variável alvo).
 
-## Algoritmo Utilizado
-Regressão Linear Simples e Múltipla, onde G3 é prevista a partir de G1 e G2.
+### Tamanho da População
+- **Total:** 1044 registros (junção dos datasets de matemática e português).
 
-## Critérios de Hiperparâmetros
-Não se aplica, pois regressão linear não depende de hiperparâmetros ajustáveis.
+### Divisão de Dados
+- **Treinamento:** 80%
+- **Teste:** 20%
 
-## Uso de Transfer Learning
-Não utilizado.
+### Validação Cruzada
+- Não foi utilizada validação cruzada, apenas divisão simples de treino e teste.
 
-## Técnicas de Regularização
-Não aplicadas.
+### Algoritmos Utilizados
+- **Regressão Linear Múltipla:** Modelo base, simples e interpretável.
+- **XGBoost Regressor:** Algoritmo de boosting que melhora a capacidade preditiva.
 
-## Aumento de Dados
-Não foi necessário, pois a base possui quantidade suficiente para uma regressão multipla e XGBoost Regression.
+### Critérios de Hiperparâmetros
+- **Regressão Linear:** Não aplicável.
+- **XGBoost:** Teste manual dos hiperparâmetros `n_estimators`, `max_depth` e `learning_rate`.
 
-## Desbalanceamento de Classes
-Não aplicável, pois é um problema de regressão.
-Figuras de Mérito
-Métricas Utilizadas:
-- Desvio Padrão
-- MAE (Erro Absoluto Médio)
-- Média
+### Uso de Transfer Learning
+- Não utilizado.
 
-# Implementação
-Ambiente: Python (bibliotecas Pandas, Scikit-Learn e Matplotlib).
-Processo:
-1. Limpeza dos dados, considerando apenas as variáveis G1, G2 e G3.
-2. Modelagem utilizando regressão linear.
-3. Avaliação por meio das métricas descritas.
-## Fontes de Implementação
-- Documentação oficial do Scikit-Learn.
-- Exemplos do Kaggle sobre análise da base Student Performance.
-- UCI Machine Learning Repository.
-## Modificações na Técnica
-O artigo original aplica regressão para predição de uso de IA. No presente miniprojeto, o mesmo método foi adaptado para predição de nota final (G3) a partir das notas parciais G1 e G2.
-## Contribuição dos Integrantes
-Cada membro da equipe ficou responsável por:
-- Coleta e entendimento dos dados;
-- Pré-processamento e seleção de variáveis;
-- Desenvolvimento e avaliação do modelo;
-- Montagem do relatório e dos slides.
+### Técnicas de Regularização
+- **XGBoost:** Regularização L1 e L2 intrínseca.
+- **Regressão Linear:** Não aplicada.
+
+### Aumento de Dados
+- Não necessário.
+
+### Desbalanceamento de Classes
+- Não aplicável (problema de regressão).
+
+## Figuras de Mérito
+
+- **R²** — Coeficiente de Determinação.
+- **MAE** — Erro Absoluto Médio.
+- **RMSE** — Raiz do Erro Quadrático Médio.
+- **Desvio Padrão dos Erros.**
+- **MEAN**
+
 ## Implementação do Miniprojeto
-Ferramentas e Tecnologias Utilizadas
-- Linguagem: Python
-- Bibliotecas: pandas, scikit-learn, matplotlib, seaborn, rich
 
-# Arquivos Utilizados
-- Dados:
-  - student-mat.csv
-  - student-por.csv
-- Código:
-  - ai_topics.ipynb (Notebook com análise, modelagem e avaliação)
-- Documentação:
-  - README.md
-  - requirements.txt
+### Ferramentas e Tecnologias
+- **Linguagem:** Python
+- **Bibliotecas:** pandas, scikit-learn, xgboost, matplotlib, seaborn, rich
 
-# Etapas da Implementação
-1. Leitura e Preparação dos Dados:
-   - Carregamento dos datasets student-mat.csv e student-por.csv.
-   - Seleção das colunas G1, G2 e G3.
-   - Junção dos dois datasets.
+### Arquivos do Projeto
+- **Dados:** student-mat.csv, student-por.csv
+- **Código:** ai_topics.ipynb
+- **Documentação:** README.md, requirements.txt
 
-2. Análise Exploratória:
-   - Estatísticas descritivas.
-   - Análise de correlação entre G1, G2 e G3.
-   - Visualização de dispersão e análise de outliers.
+### Etapas da Implementação
+1. **Leitura e Preparação dos Dados**
+2. **Análise Exploratória**
+3. **Criação dos Modelos**
+4. **Avaliação dos Modelos**
+5. **Interpretação dos Resultados**
 
-3. Criação do Modelo:
-   - Definição de G1 e G2 como variáveis independentes e G3 como alvo.
-   - Divisão dos dados em treino (80%) e teste (20%).
-   - Treinamento do modelo de Regressão Linear Múltipla.
+## Fontes e Referências
+- Documentação do Scikit-Learn
+- Documentação do XGBoost
+- Kaggle - Student Performance Dataset
+- UCI Machine Learning Repository
+- Código: ai_topics.ipynb
 
-4. Avaliação do Modelo:
-   - Cálculo das métricas: R², MAE, RMSE.
-   - Plotagem da linha de regressão e análise dos resíduos.
+## Modificações na Técnica
+- Adaptação do artigo original para predição de **nota final (G3)** com base em **G1** e **G2**.
+- Inclusão de modelo avançado XGBoost além da regressão linear.
 
-5. Interpretação dos Resultados:
-   - Avaliação dos coeficientes.
-   - Discussão sobre os erros e possíveis melhorias.
+## Contribuição dos Integrantes
+- Coleta e compreensão dos dados. (Russo)
+- Análise exploratória e pré-processamento. (Maiara)
+- Desenvolvimento e comparação dos modelos. (Maiara)
+- Geração de visualizações, relatório e documentação. (Russo)
+- Preparação dos slides e apresentação. (Russo)

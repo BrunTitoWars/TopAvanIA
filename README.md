@@ -92,6 +92,6 @@
 ## Contribuição dos Integrantes
 - Coleta e compreensão dos dados. (Russo)
 - Análise exploratória e pré-processamento. (Maiara)
-- Desenvolvimento e comparação dos modelos. (Maiara)
+- Desenvolvimento e comparação dos modelos. (Russo)
 - Geração de visualizações, relatório e documentação. (Russo)
-- Preparação dos slides e apresentação. (Russo)
+- Preparação dos slides e apresentação. (Maiara)

@@ -6,3 +6,5 @@ scipy
 statsmodels
 rich
 ipython
+xgboost
+scikit-learn

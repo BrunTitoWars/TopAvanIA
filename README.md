@@ -90,7 +90,7 @@
 - Inclusão de modelo avançado XGBoost além da regressão linear.
 
 ## Contribuição dos Integrantes
-- Coleta e compreensão dos dados. (Russo)
+- Coleta e compreensão dos dados. (Russo e Maiara)
 - Análise exploratória e pré-processamento. (Maiara)
 - Desenvolvimento e comparação dos modelos. (Russo)
 - Geração de visualizações, relatório e documentação. (Russo)
